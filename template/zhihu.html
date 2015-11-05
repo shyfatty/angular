@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>知乎todos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <style>
+        *{padding:0;margin:0;}
+        a{outline:none;text-decoration:none;}
+        body{font: 14px/1.5 arial}
+        .w960{width:560px;margin:0 auto;}
+        .hd{background: #059ed3;color:#fff;}
+        .hd,.ft{padding:5px;}
+        .ft{background:#ccc;text-align:right;}
+        .row{padding:5px;border-bottom:solid 1px #eee;}
+        .row div{display:inline}
+        .row a{float:right;}
+        .ft a{color:green;font-weight:bold}
+        code{display:block;border:solid 1px #666;padding:10px;background:#ffffc0;}
+        h3{margin:10px 0;color:#ff9900;}
+        input{border:solid 1px #c0c0c0;line-height:1.5em;height:1.5em}
+    </style>
+</head>
+<body>
+<div class="w960">
+    <h3>todos</h3>
+    <div id="datalist" ng-app="myTodos" ng-controller="todos">
+        <div class="hd">现在一共有：<strong class="item_count" ng-bind="items.length"></strong> 个条目</div>
+        <div class="list">
+            <div class="row" ng-repeat="x in items">
+                <div ng-show="!x.isOpen" ng-bind="x.name" ></div>
+                <input type="text" ng-model="x.name" ng-show="x.isOpen">
+                <a href="javascript:;" ng-click="x.isOpen = !x.isOpen" ng-bind="!x.isOpen?'修改':'保存'"  ></a>
+            </div>
+        </div>
+        <div class="ft"><a href="javascript:;" ng-click="addItem()">新增条目</a></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../angular.min.js"></script>
+<script type="text/javascript">
+var app = angular.module('myTodos',[]);
+    app.controller('todos',function($scope){
+        $scope.items = [
+            {name:'这是第一条',isOpen:false},
+            {name:'这是第二条',isOpen:false},
+            {name:'花儿为什么这样红？',isOpen:false},
+            {name:'你知道小月月是哪个不？',isOpen:false},
+            {name:'人生就是一个杯具',isOpen:false}
+        ];
+        $scope.addItem = function(){
+            var _json = {name:'未命名',isOpen:true};
+            $scope.items.push(_json)
+        }
+    })
+</script>
+</html>

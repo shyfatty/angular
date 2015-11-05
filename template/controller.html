@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>angular</title>
+    <script type="text/javascript" src="../angular.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="personCtrl">
+    <ul>
+        <li ng-repeat="x in names">
+            {{"name:"+x.name+" "+"age:"+x.age}}
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+    var app = angular.module('myApp',[]);
+    app.controller('personCtrl',function($scope){
+        $scope.names = [
+            {name:'JoneSnow',age:29},
+            {name:'ShaoXia',age:26},
+            {name:'Liangzai',age:25}
+        ]
+    })
+</script>
+</html>

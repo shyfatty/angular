@@ -1,0 +1,61 @@
+/*榜单页 start*/
+.pic-group{float:left;width: 125px;height:170px;border: 1px solid #f16100;padding: 5px;margin-right: 10px;}
+.list-content{padding-top: 20px;border: 1px solid #e6e6e6;margin-bottom: 10px;background: #ffffff;}
+.list-content-inner{padding-left: 15px;padding-right: 15px;border-bottom: 1px solid #c8c8c8;}
+.word p:first-child{font-size: 16px;color: #333333;}
+.word p:nth-child(2){margin-top: 110px;}
+.word p:nth-child(3),.word p:nth-child(2){font-size: 14px;color: #6a6a6a;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.list-button{clear: both;}
+.list-button ul{overflow: hidden;}
+.list-button ul li{width: 50%;float: left;text-align: center;height: 40px;color: #5d5d5d;font-size: 12px;}
+.list-button ul li a{color:#5d5d5d;display: inline-block;width: 100%;height: 30px;line-height: 30px;margin-top: 5px;border-right: 1px solid #c8c8c8;}
+.main-list{display:inline-block;width:100%;overflow: hidden;padding-bottom: 15px;}
+.last-title{height: 36px;line-height: 36px;background: #ffffff;}
+.last-title h2{font-size: 14px;color: #333333;padding-left: 15px;border-top: 1px solid #e6e6e6;}
+.list-button .icon-eay{width: 25px;height: 15px;background: url("../img/icon-eay.png") no-repeat;background-size: 25px 15px;display: inline-block;margin-right: 5px;margin-bottom: -3px;}
+.list-button .icon-share{width: 16px;height: 15px;background: url("../img/icon-share.png") no-repeat;background-size: 16px 15px;margin-right:5px;margin-bottom:-3px;display: inline-block;}
+/*榜单页 end*/
+/*pk页 start*/
+.pk-main{padding-top:20px;}
+.wenan{padding-bottom:10px;padding-left:15px;padding-right:15px;background: url("../img/pkup.jpg") no-repeat bottom;background-size: 100%}
+.wenan p{font-size: 16px;color: #fef7e5;}
+.pk-active{background: url("../img/pkdown.jpg") no-repeat top;background-size: 100%;height: 240px;}
+.pk-change{display: block;height: 25px;width: 54px;background: url("../img/changebutton.png") no-repeat;background-size: 54px 25px;
+    margin: 0 auto;
+}
+.pk-real{width:90%;margin: 0px auto;}
+.pk-real a{padding-left: 1px;}
+.pk-real .left{float: left;text-align: center;}
+.pk-real .left .go-die-button,.pk-real .right .go-die-button{display:inline-block;width:107px;height:44px;background: url("../img/godie.png") no-repeat;
+    background-size:220px 44px;margin-top: 10px;}
+.pk-real .right{float: right;text-align: center;}
+.pk-real .right,.pk-real .left{background: url("../img/bookborder.png") no-repeat;background-size:110px 147px;padding-top: 8px;}
+
+@media (min-width:321px) { /*iphone6*/
+    .pk-active{height: 280px;}
+    .pk-real{margin: 13px auto;}
+    .pk-real .left .go-die-button,.pk-real .right .go-die-button{margin-top: 26px;}
+}
+@media (min-width:376px) { /*iphone6 plus*/
+    .pk-active{height: 308px;}
+    .pk-real{margin: 16px auto;}
+    .pk-real .left .go-die-button,.pk-real .right .go-die-button{margin-top: 30px;}
+}
+.pk-manhua img{border-radius: 5px;}
+.pk-list-title{width: 100%;height: 40px;line-height:40px;text-align:center;background: url("../img/pktitlebg.png") repeat-x;}
+.pk-list-title span{margin-left: 5px;margin-right: 5px;font-size: 16px;color: #860814;}
+.pk-list-title i{width: 13px; height: 8px;display: inline-block;background: url("../img/sanjiao.png") no-repeat;background-size: 13px 16px;float: right;margin-right: 15px;margin-top: 17px;}
+.pk-list-title i.open{width: 13px; height: 8px;display: inline-block;background: url("../img/sanjiao.png") no-repeat;background-size: 13px 16px;float: right;margin-right: 15px;margin-top: 17px;background-position: 0px -8px}
+
+.pk-list-content{display: none;}
+.pk-list-content a{display: inline-block;border: 1px solid #ffffff;overflow: hidden;height: 128px;float: left;margin-right: 15px;}
+.pk-list-content ul li{padding-top: 13px;border-bottom: 1px solid #EEEEEE;padding-bottom: 15px;padding-left: 15px;padding-right: 15px;}
+.pk-list-content .right-word p:first-child{font-size: 18px;color: #000000;}
+.pk-list-content .right-word p:nth-child(2),.pk-list-content .right-word p:nth-child(3){font-size: 14px;color: #ffffff;}
+.pk-list-content .right-word p:nth-child(2){margin-top: 60px;}
+
+.pk-real .left .go-die-button-dis,.pk-real .right .go-die-button-dis{
+    background:url("../img/loading.gif") center no-repeat;background-size: 20px 20px;
+}
+
+/*pk页 end*/
